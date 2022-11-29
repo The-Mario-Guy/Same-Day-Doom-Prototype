@@ -10,7 +10,7 @@ public class CRTEffect : MonoBehaviour
    
     void Awake()
     {
-        mat = new Material( CRTShader );
+        mat = new Material(CRTShader);
     }
    
     void OnDestroy()

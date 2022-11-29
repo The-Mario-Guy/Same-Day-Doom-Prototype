@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 15
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -21952,9 +21952,9 @@ TextureImporter:
       tilemap_packed-nes_127: 519503248
       tilemap_packed-nes_992: -1491844065
       tilemap_packed-nes_199: -1128532139
-      tilemap_packed-nes_123: -1656213567
       tilemap_packed-nes_680: -1653514045
       tilemap_packed-nes_785: -150392063
+      tilemap_packed-nes_123: -1656213567
       tilemap_packed-nes_151: 101059275
       tilemap_packed-nes_314: -814138045
       tilemap_packed-nes_145: -286799806
