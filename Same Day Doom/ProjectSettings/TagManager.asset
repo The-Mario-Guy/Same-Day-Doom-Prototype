@@ -44,9 +44,12 @@ TagManager:
   - name: Ground
     uniqueID: 3453265665
     locked: 0
+  - name: Solid
+    uniqueID: 1566443995
+    locked: 0
   - name: Player
     uniqueID: 2374610751
     locked: 0
-  - name: Sprites
-    uniqueID: 1566443995
+  - name: Over Player Tiles
+    uniqueID: 2800629441
     locked: 0
