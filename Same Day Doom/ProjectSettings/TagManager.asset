@@ -47,9 +47,15 @@ TagManager:
   - name: Solid
     uniqueID: 1566443995
     locked: 0
+  - name: Sprites
+    uniqueID: 1929568141
+    locked: 0
   - name: Player
     uniqueID: 2374610751
     locked: 0
   - name: Over Player Tiles
     uniqueID: 2800629441
+    locked: 0
+  - name: UI
+    uniqueID: 2411827933
     locked: 0
