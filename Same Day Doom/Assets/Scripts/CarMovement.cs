@@ -2,22 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TransformMovement : MonoBehaviour
+public class CarMovement : MonoBehaviour
 {
-    public float speed = 3;
-    public float run = 2;
+      public float speed = 3;
+
     // Start is called before the first frame update
     void Start()
     {
-      
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        PlayerMovement();
+        Car();
     }
-    void PlayerMovement()
+    void Car()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -26,5 +26,4 @@ public class TransformMovement : MonoBehaviour
 
         transform.Translate(Vector2.up * verticalInput * speed * Time.deltaTime);
     }
-    
 }
