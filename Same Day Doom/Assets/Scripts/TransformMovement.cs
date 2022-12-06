@@ -14,25 +14,24 @@ public class TransformMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+      _playerAnim = GetComponent<Animator>();
+       _playerRB = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         PlayerMovement();
-       _playerAnim = GetComponent<Animator>();
-       _playerRB = GetComponent<Rigidbody2D>();
+       
     }
     void PlayerMovement()
     {
-        isMoving = true;
+        
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
         transform.Translate(Vector2.right * horizontalInput * speed * Time.deltaTime);
-
-        transform.Translate(Vector2.up * verticalInput * speed * Time.deltaTime);
+       transform.Translate(Vector2.up * verticalInput * speed * Time.deltaTime);
        //Running
         if(Input.GetKey(KeyCode.Z))
         {
@@ -40,11 +39,13 @@ public class TransformMovement : MonoBehaviour
             isMoving = false;
             _playerAnim.SetBool("isRunning", isRunning);
             speed = 5;
+            
         }
         else
         {   isRunning = false;
-            isMoving = true;
+            isMoving = true;          
             speed = 3;
+           _playerAnim.SetBool("isIdle", isIdle);
         }
 
     }
