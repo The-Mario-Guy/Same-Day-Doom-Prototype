@@ -36,14 +36,12 @@ public class TransformMovement : MonoBehaviour
         if(Input.GetKey(KeyCode.Z))
         {
             isRunning = true;
-            _playerAnim.SetBool("isRunning", isRunning);
             speed = 5;
             
         }
         else
         {   isRunning = false;         
             speed = 3;
-           _playerAnim.SetBool("isIdle", isIdle);
         }
 
     }
