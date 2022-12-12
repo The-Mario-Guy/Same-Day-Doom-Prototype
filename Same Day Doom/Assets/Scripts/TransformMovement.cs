@@ -9,6 +9,9 @@ public class TransformMovement : MonoBehaviour
     public bool isRunning = false;
     public bool isIdle = true;
 
+    public GameObject Box;
+    public bool hasBox;
+    private SpriteRenderer _boxSR;
 
     private Animator _playerAnim;
     private Rigidbody2D _playerRB;
@@ -44,5 +47,13 @@ public class TransformMovement : MonoBehaviour
             speed = 3;
         }
 
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+      if(other.gameObject.CompareTag("Box")){
+        Destroy(other.gameObject);
+        Box.gameObject.SetActive(false);
+        hasBox = true;  
+      }
     }
 }
