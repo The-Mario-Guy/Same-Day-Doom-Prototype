@@ -18,7 +18,14 @@ public class BoxScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(hasBox == true)
+        {
+            this.gameObject.SetActive(true);
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 
 }

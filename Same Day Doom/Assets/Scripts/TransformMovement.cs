@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TransformMovement : MonoBehaviour
 {
@@ -8,10 +9,16 @@ public class TransformMovement : MonoBehaviour
     public float run = 2;
     public bool isRunning = false;
     public bool isIdle = true;
+     public GameObject boxUI;
 
     public GameObject Box;
-    public bool hasBox;
+    public bool hasBox = false;
     private SpriteRenderer _boxSR;
+    private SpriteRenderer _uiboxSR;
+    public GameObject Timer;
+    public GameObject Indicators;
+    public GameObject Target;
+
 
     private Animator _playerAnim;
     private Rigidbody2D _playerRB;
@@ -19,7 +26,9 @@ public class TransformMovement : MonoBehaviour
     void Start()
     {
       _playerAnim = GetComponent<Animator>();
-       _playerRB = GetComponent<Rigidbody2D>();
+      _playerRB = GetComponent<Rigidbody2D>();
+      _boxSR = GetComponent<SpriteRenderer>();
+    
     }
 
     // Update is called once per frame
@@ -48,12 +57,25 @@ public class TransformMovement : MonoBehaviour
         }
 
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-      if(other.gameObject.CompareTag("Box")){
-        Destroy(other.gameObject);
+      if(other.gameObject.CompareTag("Box"))
+      {
+        hasBox = true;
         Box.gameObject.SetActive(false);
-        hasBox = true;  
+        boxUI.gameObject.SetActive(true);
+        Indicators.gameObject.SetActive(true);
+        Target.gameObject.SetActive(true);
+
+      }
+      if(other.gameObject.CompareTag("Target") && hasBox == true)
+      {
+        hasBox = false;
+        Box.gameObject.SetActive(true);
+        boxUI.gameObject.SetActive(false);
+        Indicators.gameObject.SetActive(false);
+        Target.gameObject.SetActive(false);
       }
     }
+    
 }

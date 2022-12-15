@@ -7,6 +7,8 @@ TagManager:
   - tractor1
   - camera1
   - Box
+  - BoxUI
+  - Target
   layers:
   - Default
   - TransparentFX
