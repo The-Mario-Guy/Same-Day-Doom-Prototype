@@ -8,9 +8,11 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     public int score;
     public TextMeshProUGUI scoreText;
+    public Rigidbody2D _boxRB;
+    public Collision2D _player;
     void Start()
     {
-        
+        _boxRB = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -19,6 +21,7 @@ public class Score : MonoBehaviour
         
     }
     private void OnTriggerEnter2D(Collision2D other)
+    
     {
         {
         Addscore();

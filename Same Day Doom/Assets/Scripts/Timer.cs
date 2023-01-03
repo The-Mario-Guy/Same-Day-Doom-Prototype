@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
 {
     float currentTime = 0f;
     float startTime = 30f;
+    public GameObject Target;
     [SerializeField] TextMeshProUGUI countdownText;
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,7 @@ public class Timer : MonoBehaviour
         if (currentTime <= 0)
         {
             currentTime = 0;
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
     }
 }
